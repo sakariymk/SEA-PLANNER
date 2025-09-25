@@ -1,88 +1,36 @@
 # SEA PLANNER
 
-SEA PLANNER is an android app for planning trips on the sea. It uses data from MET and Barentswatch to display various information about the situation on the Norwegian coastline
+SEA PLANNER is an Android app for planning sea trips along the Norwegian coastline. It provides real-time weather, marine traffic, and hazard info using MET and BarentsWatch data.  
 
-<img width="859" height="419" alt="image" src="https://github.com/user-attachments/assets/28a3e61e-93cf-4741-b6cc-68751f3d5508" />
+### Main Features
+1. **Main Map** – Interactive map with weather from GRIB files. Shows precipitation, wave height (color-coded), wind and currents (arrows), MET alerts, and nearby vessels. Users can add custom markers and adjust thresholds for areas of concern.  
+2. **Weather Forecast** – 4-day hourly forecast for temperature, precipitation, and wind. View weather for your location, cities, or custom markers to plan trips or choose alternative dates/ports.  
+3. **Alerts** – List of marine warnings color-coded by severity. Tap for details, risks, and instructions.  
 
+## 🖼 Screenshots
+![Main Map](https://github.com/user-attachments/assets/28a3e61e-93cf-4741-b6cc-68751f3d5508)  
+*(Main map with weather, vessels, and markers)*  
 
-## 📦 How to run the app
-+ Download and install Android Studio, [See guide here](https://developer.android.com/studio/install)
-+ Download this projectfold from GitHub or download it from the deliveryfolder in Devilry
-+ Open the project in Andorid Studio [See guide here](https://developer.android.com/studio/projects/create-project#ImportAProject)
-+ Navigate to Google Maps API and follow the instructions there.
-+ Create an emulator or connect to an Andorid device and run the app. [See guid here](https://developer.android.com/studio/run/emulator#get-started). 
-> If an error was to randomly happen, run gradle sync. Afterwards click on `build > clean project`
-> If you move locations, and use a different internet, restart Android Studio
-
-
-
-## Google Maps API
-
-IMPORTANT! In order for the app to function, along with its map, it is vital that you - the user - acquire your own google maps API key. 
-Without this API key, the entire map will be empty. To avoid this, please follow these steps on this link:
-https://developers.google.com/codelabs/maps-platform/maps-platform-101-android#1
-
-ABOUT THE GOOGLE BILLING:
-Essentially, you will need to make your own Google Cloud Platform account.
-Note that it will mention billing, however, you can choose a free course which includes
-a 90 day trial, in which after its due, you can cancel without ever commiting your funds.
-Basically, a free 90 day access to an API key. 
-
-After getting your account, make sure to create a new project (if you do not already have one).
-Then search for "Maps SDK for Android", and have it enabled. 
-After enabling it, you should get a prompt showing your API key. 
-In the event you do not see this key on a prompt, go over to "Key & Credentials", 
-on the furthest right side where it says "Maps Platform API Key", should be the option to show your key.
-
-(Video tutorial link below:)
-https://youtu.be/gnvbxMfuZc0?t=91 to 4:14
-
-AFTER GETTING THE KEY:
-
-After acquiring your own Google Maps API key, go over to your 
-local.properties file. Then you must write the following:
-
+## 📦 Quick Start
+1. Install [Android Studio](https://developer.android.com/studio/install)  
+2. Clone/download this project  
+3. Open in Android Studio: [Guide](https://developer.android.com/studio/projects/create-project#ImportAProject)  
+4. Enable Google Maps API and get your key: [Guide](https://developers.google.com/codelabs/maps-platform/maps-platform-101-android#1)  
+5. Add API key in `local.properties`:
+```properties
 MAP_API_NOKKEL = YOUR_KEY_HERE
+Run the app on an emulator or Android device: Guide
 
-(Tutorial link below:)
-https://developers.google.com/codelabs/maps-platform/maps-platform-101-android#3
+If errors occur: run Gradle sync → Build > Clean Project → restart Android Studio if needed.
 
-ABOUT HOW THE KEY IS USED:
-MAP_API_NOKKEL is a variable stored within the app. DO NOT CHANGE ANYTHING ABOUT THIS VARIABLE!
-The only thing you must do with this is, after the '=' symbol, write your API key. Do not use "" or ''
-or any other symbols on YOUR_KEY_HERE.
+📙 Libraries
+Kotlin & AndroidX Core, Compose, Google Maps Compose
 
+Coil, Ktor, Retrofit & Gson, OkHttp, Logger
 
-ABOUT LOCAL.PROPERTIES:
-This file is only for you to modify. This means that it is ONLY available to you; not your friends/colleagues. 
+JGribX, Local JAR file
 
-AFTER THE STEPS
-After writing MAP_API_NOKKEL = YOUR_KEY_HERE on local.properties, you must close Android Studio and re-open it.
-Hopefully it should show the map from your API key. Keep in mind that it could take several minutes for the API to fully register 
-within Android Studio. 
+Unit testing: JUnit, Mockito, MockK
 
-In the event that the map still does not show up, make sure to:
-—make sure your google 
-—write your API key correctly
-
-## 📙 Libraries   
-    +Kotlin and AndroidX core
-    +Compose
-    +Debug Compose
-    +Compose UI-testing
-    +Google Maps Compose and related
-    +Coil
-    +Ktor
-    +Retrofit and Gson
-    +OkHttp
-    +Logger
-    +Local JAR-fil
-    +Unit testing: junit, core-testing, mockito, mockk, 
-    +JGribX
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+Contributing
+Pull requests welcome. For major changes, open an issue first to discuss.
